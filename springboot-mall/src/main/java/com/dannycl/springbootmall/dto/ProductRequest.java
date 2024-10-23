@@ -1,30 +1,24 @@
-package com.dannycl.springbootmall.model;
+package com.dannycl.springbootmall.dto;
 
 import com.dannycl.springbootmall.constant.ProductCategory;
+import jakarta.validation.constraints.NotNull;
 
-import java.util.Date;
+public class ProductRequest {
 
-public class Product {
-
-    private Integer productId;
+    @NotNull
     private String productName;
+
+    @NotNull
     private ProductCategory category;
+    @NotNull
     private String imageUrl;
+    @NotNull
     private Integer price;
+    @NotNull
     private Integer stock;
     private String description;
-    private Date createDate;
-    private Date lastModfiedDate;
 
-    public Integer getProduct_id() {
-        return productId;
-    }
-
-    public void setProduct_id(Integer product_id) {
-        this.productId = product_id;
-    }
-
-    public String getProduct_name() {
+    public String getProductName() {
         return productName;
     }
 
@@ -70,21 +64,5 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    public Date getLastModfiedDate() {
-        return lastModfiedDate;
-    }
-
-    public void setLastModfiedDate(Date lastModfiedDate) {
-        this.lastModfiedDate = lastModfiedDate;
     }
 }
